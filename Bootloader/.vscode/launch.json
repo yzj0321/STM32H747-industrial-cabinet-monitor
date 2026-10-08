@@ -1,0 +1,130 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "STM32H747 CM7",
+      "cwd": "${workspaceFolder}",
+      "executable": "${workspaceFolder}/Makefile/CM7/build/GPIO_CM7.elf",
+      "request": "launch",
+      "type": "cortex-debug",
+      "servertype": "openocd",
+      "serverpath": "C:/Users/28576/AppData/Local/Microsoft/WinGet/Packages/xpack-dev-tools.openocd-xpack_Microsoft.Winget.Source_8wekyb3d8bbwe/xpack-openocd-0.12.0-7/bin/openocd.exe",
+      "device": "STM32H747XIHx",
+      "interface": "swd",
+      "configFiles": [
+        "interface/cmsis-dap.cfg",
+        "target/stm32h7x_dual_bank.cfg"
+      ],
+      "searchDir": [
+        "C:/Users/28576/AppData/Local/Microsoft/WinGet/Packages/xpack-dev-tools.openocd-xpack_Microsoft.Winget.Source_8wekyb3d8bbwe/xpack-openocd-0.12.0-7/scripts"
+      ],
+      "runToEntryPoint": "main",
+      "preLaunchTask": "build CM7",
+      "showDevDebugOutput": "raw",
+      "postRestartCommands": [
+        "monitor reset halt"
+      ]
+    },
+    {
+      "name": "STM32H747 CM7 Flash Only",
+      "cwd": "${workspaceFolder}",
+      "executable": "${workspaceFolder}/Makefile/CM7/build/GPIO_CM7.elf",
+      "request": "launch",
+      "type": "cortex-debug",
+      "servertype": "openocd",
+      "serverpath": "C:/Users/28576/AppData/Local/Microsoft/WinGet/Packages/xpack-dev-tools.openocd-xpack_Microsoft.Winget.Source_8wekyb3d8bbwe/xpack-openocd-0.12.0-7/bin/openocd.exe",
+      "device": "STM32H747XIHx",
+      "interface": "swd",
+      "configFiles": [
+        "interface/cmsis-dap.cfg",
+        "target/stm32h7x_dual_bank.cfg"
+      ],
+      "searchDir": [
+        "C:/Users/28576/AppData/Local/Microsoft/WinGet/Packages/xpack-dev-tools.openocd-xpack_Microsoft.Winget.Source_8wekyb3d8bbwe/xpack-openocd-0.12.0-7/scripts"
+      ],
+      "preLaunchTask": "build CM7",
+      "showDevDebugOutput": "raw",
+      "runToEntryPoint": "main",
+      "postLaunchCommands": [
+        "monitor reset run",
+        "disconnect"
+      ]
+    },
+    {
+      "name": "STM32H747 CM4",
+      "cwd": "${workspaceFolder}",
+      "executable": "${workspaceFolder}/Makefile/CM4/build/GPIO_CM4.elf",
+      "request": "launch",
+      "type": "cortex-debug",
+      "servertype": "openocd",
+      "serverpath": "C:/Users/28576/AppData/Local/Microsoft/WinGet/Packages/xpack-dev-tools.openocd-xpack_Microsoft.Winget.Source_8wekyb3d8bbwe/xpack-openocd-0.12.0-7/bin/openocd.exe",
+      "device": "STM32H747XIHx",
+      "interface": "swd",
+      "configFiles": [
+        "interface/cmsis-dap.cfg",
+        "target/stm32h7x_dual_bank.cfg"
+      ],
+      "searchDir": [
+        "C:/Users/28576/AppData/Local/Microsoft/WinGet/Packages/xpack-dev-tools.openocd-xpack_Microsoft.Winget.Source_8wekyb3d8bbwe/xpack-openocd-0.12.0-7/scripts"
+      ],
+      "runToEntryPoint": "main",
+      "preLaunchTask": "build CM4",
+      "showDevDebugOutput": "raw",
+      "postRestartCommands": [
+        "monitor reset halt"
+      ]
+    },
+    {
+      "name": "STM32H747 CM4 Flash Only",
+      "cwd": "${workspaceFolder}",
+      "executable": "${workspaceFolder}/Makefile/CM4/build/GPIO_CM4.elf",
+      "request": "launch",
+      "type": "cortex-debug",
+      "servertype": "openocd",
+      "serverpath": "C:/Users/28576/AppData/Local/Microsoft/WinGet/Packages/xpack-dev-tools.openocd-xpack_Microsoft.Winget.Source_8wekyb3d8bbwe/xpack-openocd-0.12.0-7/bin/openocd.exe",
+      "device": "STM32H747XIHx",
+      "interface": "swd",
+      "configFiles": [
+        "interface/cmsis-dap.cfg",
+        "target/stm32h7x_dual_bank.cfg"
+      ],
+      "searchDir": [
+        "C:/Users/28576/AppData/Local/Microsoft/WinGet/Packages/xpack-dev-tools.openocd-xpack_Microsoft.Winget.Source_8wekyb3d8bbwe/xpack-openocd-0.12.0-7/scripts"
+      ],
+      "preLaunchTask": "build CM4",
+      "showDevDebugOutput": "raw",
+      "runToEntryPoint": "main",
+      "postLaunchCommands": [
+        "monitor reset run",
+        "disconnect"
+      ]
+    },
+    {
+      "name": "STM32H747 CM4 Attach",
+      "cwd": "${workspaceFolder}",
+      "executable": "${workspaceFolder}/Makefile/CM4/build/GPIO_CM4.elf",
+      "request": "attach",
+      "type": "cortex-debug",
+      "servertype": "openocd",
+      "serverpath": "C:/Users/28576/AppData/Local/Microsoft/WinGet/Packages/xpack-dev-tools.openocd-xpack_Microsoft.Winget.Source_8wekyb3d8bbwe/xpack-openocd-0.12.0-7/bin/openocd.exe",
+      "device": "STM32H747XIHx",
+      "interface": "swd",
+      "configFiles": [
+        "interface/cmsis-dap.cfg",
+        "target/stm32h7x_dual_bank.cfg"
+      ],
+      "searchDir": [
+        "C:/Users/28576/AppData/Local/Microsoft/WinGet/Packages/xpack-dev-tools.openocd-xpack_Microsoft.Winget.Source_8wekyb3d8bbwe/xpack-openocd-0.12.0-7/scripts"
+      ],
+      "numberOfProcessors": 2,
+      "targetProcessor": 1,
+      "openOCDPreConfigLaunchCommands": [
+        "set DUAL_CORE 1"
+      ],
+      "postLaunchCommands": [
+        "monitor halt"
+      ],
+      "showDevDebugOutput": "raw"
+    }
+  ]
+}

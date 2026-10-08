@@ -1,0 +1,26 @@
+# Generated embedded build outputs
+**/build/
+**/Debug/
+**/Release/
+**/*.elf
+**/*.hex
+**/*.bin
+**/*.map
+**/*.lst
+**/*.d
+**/*.o
+**/*.a
+**/*.lib
+**/*.exe
+**/*.zip
+
+# IDE/user-local files
+**/.git/
+**/*.user
+**/*.user.*
+**/.qtcreator/
+
+# Local generated renders and temporary files
+_*/
+tmp_*/
+*.tmp

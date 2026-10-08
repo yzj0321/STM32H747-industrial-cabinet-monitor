@@ -1,0 +1,54 @@
+# Makefile build outputs
+Makefile/**/build/
+Makefile/**/build_A/
+Makefile/**/build_B/
+Makefile/**/build_stub/
+
+# GNU Arm / GCC
+*.o
+*.d
+*.lst
+*.su
+*.elf
+*.hex
+*.bin
+*.map
+*.axf
+
+# STM32CubeIDE
+Debug/
+Release/
+*.cyclo
+
+# Keil MDK
+*.crf
+*.htm
+*.lnp
+*.dep
+*.bak
+*.uvguix*
+*.uvoptx
+Objects/
+Listings/
+
+# IAR
+settings/
+*.ewt
+
+# IDE / editor (keep shared .vscode project files)
+.idea/
+*.code-workspace
+*.swp
+*~
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Cursor
+.cursor/
+
+# Debug / flash logs
+*.log
+JLinkLog.txt

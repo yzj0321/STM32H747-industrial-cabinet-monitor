@@ -1,0 +1,87 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build CM7",
+      "type": "shell",
+      "command": "make",
+      "args": [],
+      "options": {
+        "cwd": "${workspaceFolder}/Makefile/CM7"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "build CM4",
+      "type": "shell",
+      "command": "make",
+      "args": [],
+      "options": {
+        "cwd": "${workspaceFolder}/Makefile/CM4"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "flash CM7",
+      "type": "shell",
+      "command": "C:/Users/28576/AppData/Local/Microsoft/WinGet/Packages/xpack-dev-tools.openocd-xpack_Microsoft.Winget.Source_8wekyb3d8bbwe/xpack-openocd-0.12.0-7/bin/openocd.exe",
+      "args": [
+        "-s",
+        "C:/Users/28576/AppData/Local/Microsoft/WinGet/Packages/xpack-dev-tools.openocd-xpack_Microsoft.Winget.Source_8wekyb3d8bbwe/xpack-openocd-0.12.0-7/scripts",
+        "-f",
+        "interface/cmsis-dap.cfg",
+        "-f",
+        "target/stm32h7x_dual_bank.cfg",
+        "-c",
+        "set DUAL_CORE 1",
+        "-c",
+        "init",
+        "-c",
+        "reset halt",
+        "-c",
+        "program Makefile/CM7/build/GPIO_CM7.elf verify",
+        "-c",
+        "reset run",
+        "-c",
+        "shutdown"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "flash CM4",
+      "type": "shell",
+      "command": "C:/Users/28576/AppData/Local/Microsoft/WinGet/Packages/xpack-dev-tools.openocd-xpack_Microsoft.Winget.Source_8wekyb3d8bbwe/xpack-openocd-0.12.0-7/bin/openocd.exe",
+      "args": [
+        "-s",
+        "C:/Users/28576/AppData/Local/Microsoft/WinGet/Packages/xpack-dev-tools.openocd-xpack_Microsoft.Winget.Source_8wekyb3d8bbwe/xpack-openocd-0.12.0-7/scripts",
+        "-f",
+        "interface/cmsis-dap.cfg",
+        "-f",
+        "target/stm32h7x_dual_bank.cfg",
+        "-c",
+        "set DUAL_CORE 1",
+        "-c",
+        "init",
+        "-c",
+        "reset halt",
+        "-c",
+        "program Makefile/CM4/build/GPIO_CM4.elf verify",
+        "-c",
+        "reset run",
+        "-c",
+        "shutdown"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    }
+  ]
+}

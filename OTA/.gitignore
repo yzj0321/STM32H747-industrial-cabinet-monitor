@@ -1,0 +1,5 @@
+build/
+.qtcreator/
+*.user
+*.pro.user*
+images/*.bin
